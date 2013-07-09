@@ -1,8 +1,15 @@
-Sample::Application.routes.draw do  root :to => 'messages#index'
+Sample::Application.routes.draw do 
+  get "static_pages/home"
 
-  root to: 'static_pages#home'
+  get "static_pages/help"
+
+  get "static_pages/about"
+
+  root :to => 'messages#index'
 
   resources :messages
+
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
